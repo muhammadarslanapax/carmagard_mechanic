@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "assets",
+			"path": "../../../../other/handyman/assets"
+		},
+		{
+			"name": "carmagard_mechanic",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
