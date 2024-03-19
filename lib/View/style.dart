@@ -323,3 +323,42 @@ mixin class Ui {
     return SizedBox(width: num);
   }
 }
+
+
+
+
+
+class LoadingContainer extends StatelessWidget {
+  final double height;
+  final double width;
+
+  const LoadingContainer({
+    super.key,
+    required this.height,
+    required this.width,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height,
+      width: width,
+      color: AppColor.primary.withOpacity(0.1),
+      child: Center(
+        child: SpinKitFadingCircle(
+          size: 30,
+          duration: const Duration(milliseconds: 3000),
+          itemBuilder: (BuildContext context, int index) {
+            return DecoratedBox(
+              decoration: BoxDecoration(
+                color: AppColor.primary,
+                borderRadius: BorderRadius.circular(100),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
